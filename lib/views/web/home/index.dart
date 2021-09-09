@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               height: 100,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/images/logo.jpeg'))),
+                      image: AssetImage('assets/images/logo.png'))),
             ),
           ),
           Column(
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             image: DecorationImage(
-                                image: AssetImage('assets/images/logo.jpeg'))),
+                                image: AssetImage('assets/images/logo.png'))),
                       ),
                       IconButton(
                           onPressed: () {},
