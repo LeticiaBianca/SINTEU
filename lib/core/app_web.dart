@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/views/web/home/index.dart';
+import 'package:sinteu/views/web/login/index.dart';
 
 class AppWeb extends StatelessWidget {
   // This widget is the root of your application.
