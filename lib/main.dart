@@ -7,4 +7,5 @@ void main() {
   var modoWeb = true;
 
   runApp(modoWeb ? AppWeb() : AppMobile());
+  
 }

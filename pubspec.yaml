@@ -50,6 +50,9 @@ flutter:
     - assets/images/logo_escrita.png
     - assets/images/perfil.jpg
     - assets/images/negocio.jpg
+    - assets/images/chapeu.png
+    - assets/images/conexao.png
+    - assets/images/conversa.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
