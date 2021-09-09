@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
+import 'package:sinteu/core/app_images.dart';
+import 'package:sinteu/views/web/cadastro/index.dart';
 
 class PaginaInicial extends StatefulWidget {
   const PaginaInicial({Key? key}) : super(key: key);
@@ -16,64 +18,70 @@ class _PaginaInicialState extends State<PaginaInicial> {
         children: [
           Container(
             color: AppColors.primaria01,
-            height: 300,
+            height: 360,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(width: 100),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 20),
-                    Text(
-                      'Ainda não tem',
-                      style:
-                          TextStyle(fontSize: 54, color: AppColors.corFonte02),
-                    ),
-                    Text(
-                      'cadastro?',
-                      style:
-                          TextStyle(fontSize: 54, color: AppColors.corFonte02),
-                    ),
-                    SizedBox(height: 50),
-                    TextButton(
-                        onPressed: () {
-                          print('Clicou no cadastre-se');
-                        },
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                AppColors.primaria03)),
-                        child: Text(
-                          'Cadastre-se',
-                          style: TextStyle(color: AppColors.corFonte02),
-                        ))
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 50),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 50),
+                      Text(
+                        'Ainda não tem',
+                        style:
+                            TextStyle(fontSize: 54, color: AppColors.corFonte02),
+                      ),
+                      Text(
+                        'cadastro?',
+                        style:
+                            TextStyle(fontSize: 54, color: AppColors.corFonte02, fontWeight: FontWeight.w700),
+                      ),
+                      SizedBox(height: 50),
+
+                      Container(
+                        width: 400,
+                        height: 45,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) => Cadastro()
+                              )
+                            );
+                          },
+                          child: Text(
+                            'Cadastre-se',
+                              style: TextStyle(
+                              fontSize: 23,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white
+                            ),
+                          ),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              )
+                            )
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
+
                 SizedBox(width: 20),
                 Container(
                   width: 200,
                   height: 200,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/logo.jpeg'))),
+                          image: AssetImage(AppImagens.negocios))),
                 ),
-                SizedBox(width: 20),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 50, 50),
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.chat,
-                        color: AppColors.corFonte02,
-                        size: 54,
-                      ),
-                      onPressed: () {
-                        print('Clicou no Chat');
-                      },
-                    ),
-                  ),
-                )
               ],
             ),
           )
