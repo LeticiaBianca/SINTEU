@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
+import 'package:sinteu/core/app_images.dart';
 import 'package:sinteu/views/web/pagina_inicial/index.dart';
 import 'package:sinteu/views/web/sobre/index.dart';
 
@@ -28,9 +29,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 200),
+        preferredSize: Size(screenSize.width, 220),
         child: Column(
           children: [
             _buildAreaLogo(screenSize.width),
@@ -52,31 +54,44 @@ class _HomePageState extends State<HomePage> {
   Widget _buildAreaLogo(largura) {
     return Container(
       color: AppColors.primaria02,
-      height: 120,
+      height: 150,
       width: largura,
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(100, 0, 10, 0),
+            padding: const EdgeInsets.fromLTRB(100, 15, 10, 0),
             child: Container(
-              width: 100,
-              height: 100,
+              width: 150,
+              height: 150,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/images/logo.png'))),
+                      image: AssetImage(AppImagens.logo))),
             ),
           ),
+
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('SINTEU', style: TextStyle(fontSize: 40)),
+              Text(
+                'SINTEU', 
+                style: TextStyle(
+                  fontSize: 40,
+                  color: AppColors.primaria01,
+                  fontWeight: FontWeight.w900
+                )
+              ),
               Text(
                 'Sistema de Integração entre Empresas e Universidades',
-                style: TextStyle(fontSize: 32),
+                style: TextStyle(
+                  fontSize: 32,
+                  color: AppColors.primaria01,
+                  fontWeight: FontWeight.w600
+                ),
               )
             ],
           ),
+
           Expanded(
             child: Container(
               child: Align(
@@ -87,16 +102,16 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        width: 60,
-                        height: 60,
+                        width: 45,
+                        height: 45,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             image: DecorationImage(
-                                image: AssetImage('assets/images/logo.png'))),
+                                image: AssetImage(AppImagens.perfil))),
                       ),
                       IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.arrow_downward_outlined))
+                          icon: Icon(Icons.keyboard_arrow_down ))
                     ],
                   ),
                 ),
@@ -121,7 +136,7 @@ class _HomePageState extends State<HomePage> {
               Icons.add, 'Cadastros', 1, () => _pageController.jumpToPage(0)),
           _buildItemMenu(
               Icons.search, 'Buscas', 2, () => _pageController.jumpToPage(0)),
-          _buildItemMenu(Icons.notifications, 'Noticias', 3,
+          _buildItemMenu(Icons.notification_important, 'Noticias', 3,
               () => _pageController.jumpToPage(0)),
           _buildItemMenu(
               Icons.group, 'Grupos', 4, () => _pageController.jumpToPage(0)),
@@ -139,30 +154,33 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildItemMenu(icone, texto, indice, VoidCallback onClick) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
-      child: InkWell(
-        child: Row(
-          children: [
-            Icon(icone,
-                color: menuAtivo[indice]
-                    ? AppColors.itemComFoco
-                    : AppColors.corFontePadrao),
-            SizedBox(width: 5),
-            Text(texto,
-                style: menuAtivo[indice]
-                    ? TextStyle(color: AppColors.itemComFoco)
-                    : TextStyle(color: AppColors.corFontePadrao))
-          ],
+    return Container(
+      width: MediaQuery.of(context).size.width/9,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
+        child: InkWell(
+          child: Row(
+            children: [
+              Icon(icone,
+                  color: menuAtivo[indice]
+                      ? AppColors.primaria02
+                      : AppColors.primaria01),
+              SizedBox(width: 5),
+              Text(texto,
+                  style: menuAtivo[indice]
+                      ? TextStyle(color: AppColors.primaria02)
+                      : TextStyle(color: AppColors.primaria01))
+            ],
+          ),
+          onHover: (value) {
+            setState(() {
+              menuAtivo[indice] = value;
+            });
+          },
+          onTap: () {
+            onClick();
+          },
         ),
-        onHover: (value) {
-          setState(() {
-            menuAtivo[indice] = value;
-          });
-        },
-        onTap: () {
-          onClick();
-        },
       ),
     );
   }
