@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class AppImagens{
   
   static String get logo => 'assets/images/logo.png';

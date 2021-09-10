@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   var menuAtivo = [
     false,
     false,
@@ -48,6 +49,24 @@ class _HomePageState extends State<HomePage> {
           SobrePage(), //1
         ],
       ),
+
+
+      //rodapé
+      bottomSheet: Container(
+          height: 50,
+          color: AppColors.primaria02,
+          child: Center(
+            child: Text(
+                '\u00a9 SINTEU - 2021', 
+                style: TextStyle(
+                  fontSize: 20,
+                  color: AppColors.primaria01,
+                  fontWeight: FontWeight.w900
+                )
+            ),
+          ),
+        ),
+        
 
     );
   }
@@ -185,4 +204,27 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  //itens menu suspenso
+  // Widget _buildMenuSuspenso(texto, linha1, linha2){
+  //   String valueChoose;
+  //   List listItem = [ linha1, linha2 ];
+
+  //   return Container(
+  //     width: MediaQuery.of(context).size.width/9,
+  //     child: DropdownButton(
+  //       hint: Text(texto),
+  //       value: valueChoose,
+
+  //       onChanged: (newValue){
+  //         setState(() {
+  //           valueChoose = newValue;
+  //         });
+  //       },
+  //       items: listItem.map,((valueItem))
+
+  //     ),
+  //   );
+  // }
+
 }
