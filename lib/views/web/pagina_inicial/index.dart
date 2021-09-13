@@ -209,7 +209,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 40, bottom: 50),
+                  padding: const EdgeInsets.only(top: 40, bottom: 100),
                   child: Container(
                     height: 400,
                     width: MediaQuery.of(context).size.width/3,
