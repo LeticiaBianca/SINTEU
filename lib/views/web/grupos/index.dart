@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sinteu/core/app_images.dart';
 
 class GruposPage extends StatefulWidget {
   const GruposPage({ Key? key }) : super(key: key);

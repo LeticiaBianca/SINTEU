@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sinteu/core/app_images.dart';
 
 class VitrinePage extends StatefulWidget {
   const VitrinePage({ Key? key }) : super(key: key);

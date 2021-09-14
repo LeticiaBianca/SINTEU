@@ -8,4 +8,5 @@ class AppImagens{
   static String get icon01 => 'assets/images/chapeu.png';
   static String get icon03 => 'assets/images/conexao.png';
   static String get icon02 => 'assets/images/conversa.png';
+  static String get codeInsta => 'assets/images/insta.jpg';
 }

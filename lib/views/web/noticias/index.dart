@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sinteu/core/app_images.dart';
 
 class NoticiasPage extends StatefulWidget {
   const NoticiasPage({ Key? key }) : super(key: key);
