@@ -109,20 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 5, 20, 0),
-                      child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                    builder: (context) => Cadastro()));
-                          }, 
-                          child: Text('Não possui conta? Cadastre-se!',
-                          )),
-                    ),
-                  ),
+                  
                 ],
               ),
             ),
