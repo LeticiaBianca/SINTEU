@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
 import 'package:sinteu/core/app_images.dart';
+import 'package:sinteu/views/web/contato/index.dart';
+import 'package:sinteu/views/web/grupos/index.dart';
+import 'package:sinteu/views/web/noticias/index.dart';
+import 'package:sinteu/views/web/notificacoes/index.dart';
 import 'package:sinteu/views/web/pagina_inicial/index.dart';
 import 'package:sinteu/views/web/sobre/index.dart';
+import 'package:sinteu/views/web/vitrine/index.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,7 +51,12 @@ class _HomePageState extends State<HomePage> {
         controller: _pageController,
         children: [
           PaginaInicial(), //0
-          SobrePage(), //1
+          SobrePage(),//1
+          NoticiasPage(), //2
+          GruposPage(),//3
+          VitrinePage(),//4
+          NotificacoesPage(),//5
+          ContatoPage(),//6
         ],
       ),
 
@@ -157,17 +167,18 @@ class _HomePageState extends State<HomePage> {
           _buildItemMenu(
               Icons.search, 'Buscas', 2, () => _pageController.jumpToPage(0)),
           _buildItemMenu(Icons.notification_important, 'Noticias', 3,
-              () => _pageController.jumpToPage(0)),
+              () => _pageController.jumpToPage(2)),
           _buildItemMenu(
-              Icons.group, 'Grupos', 4, () => _pageController.jumpToPage(0)),
+              Icons.group, 'Grupos', 4, () => _pageController.jumpToPage(3)),
           _buildItemMenu(Icons.favorite, 'Vitrine', 5,
-              () => _pageController.jumpToPage(0)),
+              () => _pageController.jumpToPage(4)),
           _buildItemMenu(Icons.notifications, 'Notificações', 6,
-              () => _pageController.jumpToPage(0)),
+              () => _pageController.jumpToPage(5)),
           _buildItemMenu(Icons.contact_page, 'Contato', 7,
-              () => _pageController.jumpToPage(0)),
+              () => _pageController.jumpToPage(6)),
           _buildItemMenu(
-              Icons.info, 'Sobre', 8, () => _pageController.jumpToPage(1))
+              Icons.info, 'Sobre', 8, () => _pageController.jumpToPage(1)),
+          
         ],
       ),
     );
@@ -206,25 +217,32 @@ class _HomePageState extends State<HomePage> {
   }
 
   //itens menu suspenso
-  // Widget _buildMenuSuspenso(texto, linha1, linha2){
-  //   String valueChoose;
-  //   List listItem = [ linha1, linha2 ];
+  // Widget _buildMenuSuspenso(){
+  //   List<String> items = <String> [
+  //     'Demandas de Empresas', 'Projetos em desenvolvimento'
+  //   ];
 
-  //   return Container(
-  //     width: MediaQuery.of(context).size.width/9,
-  //     child: DropdownButton(
-  //       hint: Text(texto),
-  //       value: valueChoose,
+  //   String dropdownValue = 'Cadastros';
 
-  //       onChanged: (newValue){
-  //         setState(() {
-  //           valueChoose = newValue;
-  //         });
-  //       },
-  //       items: listItem.map,((valueItem))
-
+  //   return Scaffold(
+  //     body: Container(
+  //       child: Center(
+  //         child: DropdownButton<String>(
+  //           onChanged: null,
+  //           value: dropdownValue,
+  //           items: items.map<DropdownMenuItem<String>>(
+  //             (String value){
+  //               return DropdownMenuItem<String>(
+  //                 value: value,
+  //                 child: Text(value),
+  //               );
+  //             },
+  //           ).toList()
+  //         ),
+  //       ),
   //     ),
   //   );
   // }
+  
 
 }
