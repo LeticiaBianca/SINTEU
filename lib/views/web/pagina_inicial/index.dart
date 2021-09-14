@@ -127,6 +127,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
                               style: TextStyle(
                                 fontSize: 18,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           )
                         ],),
@@ -163,6 +164,8 @@ class _PaginaInicialState extends State<PaginaInicial> {
                               style: TextStyle(
                                 fontSize: 18,
                               ),
+                              textAlign: TextAlign.center,
+
                             ),
                           )
                         ],),
@@ -200,6 +203,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
                               style: TextStyle(
                                 fontSize: 18,
                               ),
+                              textAlign: TextAlign.center,
                             ),
                           )
                         ],),
