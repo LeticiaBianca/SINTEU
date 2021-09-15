@@ -64,20 +64,20 @@ class _HomePageState extends State<HomePage> {
 
 
       //rodapé
-      bottomSheet: Container(
-          height: 50,
-          color: AppColors.primaria02,
-          child: Center(
-            child: Text(
-                '\u00a9 SINTEU - 2021', 
-                style: TextStyle(
-                  fontSize: 20,
-                  color: AppColors.primaria01,
-                  fontWeight: FontWeight.w900
-                )
-            ),
-          ),
-        ),
+      // bottomSheet: Container(
+      //     height: 50,
+      //     color: AppColors.primaria02,
+      //     child: Center(
+      //       child: Text(
+      //           '\u00a9 SINTEU - 2021', 
+      //           style: TextStyle(
+      //             fontSize: 20,
+      //             color: AppColors.primaria01,
+      //             fontWeight: FontWeight.w900
+      //           )
+      //       ),
+      //     ),
+      //   ),
         
 
     );
@@ -218,33 +218,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  //itens menu suspenso
-  // Widget _buildMenuSuspenso(){
-  //   List<String> items = <String> [
-  //     'Demandas de Empresas', 'Projetos em desenvolvimento'
-  //   ];
-
-  //   String dropdownValue = 'Cadastros';
-
-  //   return Scaffold(
-  //     body: Container(
-  //       child: Center(
-  //         child: DropdownButton<String>(
-  //           onChanged: null,
-  //           value: dropdownValue,
-  //           items: items.map<DropdownMenuItem<String>>(
-  //             (String value){
-  //               return DropdownMenuItem<String>(
-  //                 value: value,
-  //                 child: Text(value),
-  //               );
-  //             },
-  //           ).toList()
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
   
 
 }
