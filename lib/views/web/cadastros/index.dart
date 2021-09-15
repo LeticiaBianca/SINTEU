@@ -164,7 +164,7 @@ class _CadastrosPageState extends State<CadastrosPage> {
           Align(
                     alignment: Alignment.center,
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                       child: Container(
                         width: 350,
                         height: 31,
@@ -175,9 +175,9 @@ class _CadastrosPageState extends State<CadastrosPage> {
                                     builder: (context) => HomePage()));
                           },
                           child: Text(
-                            'Entrar',
+                            'Cadastrar',
                             style: TextStyle(
-                                color: AppColors.primaria02,
+                                color: AppColors.corFonte02,
                                 fontWeight: FontWeight.bold),
                           ),
                           style: ButtonStyle(

@@ -28,7 +28,8 @@ class _CadastroState extends State<Cadastro> {
                   'Cadastre-se',
                   style: TextStyle(
                     fontSize: 40,
-                    color: AppColors.primaria03
+                    color: AppColors.primaria01,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -41,13 +42,13 @@ class _CadastroState extends State<Cadastro> {
                 padding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
                 child: Container(
                   width: MediaQuery.of(context).size.width/2-30,
-                  height: 550,
+                  height: 600,
                   color: AppColors.primaria02,
                   child: Align(
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                           child: Text(
                             'Informações Pessoais',
                             style: TextStyle(
@@ -78,7 +79,7 @@ class _CadastroState extends State<Cadastro> {
                             ),
 
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                              padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                               child: Text(
                                 'Sobrenome:',
                                 style: TextStyle(
@@ -97,7 +98,7 @@ class _CadastroState extends State<Cadastro> {
                               ),
 
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                                 child: Text(
                                   'E-mail:',
                                   style: TextStyle(
@@ -115,7 +116,7 @@ class _CadastroState extends State<Cadastro> {
                               ),
                               
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                                 child: Text(
                                   'Telefone:',
                                   style: TextStyle(
@@ -133,7 +134,7 @@ class _CadastroState extends State<Cadastro> {
                               ),
 
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                                 child: Text(
                                   'CPF:',
                                   style: TextStyle(
@@ -151,7 +152,7 @@ class _CadastroState extends State<Cadastro> {
                               ),
 
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 5, 20, 0),
+                                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                                 child: Text(
                                   'Senha:',
                                   style: TextStyle(
@@ -170,7 +171,7 @@ class _CadastroState extends State<Cadastro> {
                               ),
                               
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(20, 5, 20, 0),
+                                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                                 child: Text(
                                   'Confirmar senha:',
                                   style: TextStyle(
@@ -196,16 +197,16 @@ class _CadastroState extends State<Cadastro> {
                 padding: const EdgeInsets.fromLTRB(0, 5, 15, 5),
                 child: Container(
                   width: MediaQuery.of(context).size.width/2-30,
-                  height: 550,
+                  height: 600,
                   color: AppColors.primaria01,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                         child: Text(
                           'Cadastro de endereço',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800,
                               fontSize: 30,
                           ),
@@ -217,7 +218,7 @@ class _CadastroState extends State<Cadastro> {
                         child: Text(
                           'CEP:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -226,16 +227,18 @@ class _CadastroState extends State<Cadastro> {
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.card_travel),
-                              hintText: '11111111'),
+                              hintText: '11111111',
+                              
+                              ),
                         ),
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Logradouro:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -249,11 +252,11 @@ class _CadastroState extends State<Cadastro> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Bairro:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -267,11 +270,11 @@ class _CadastroState extends State<Cadastro> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Cidade:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -285,11 +288,11 @@ class _CadastroState extends State<Cadastro> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Estado:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -303,11 +306,11 @@ class _CadastroState extends State<Cadastro> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Número:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -316,16 +319,17 @@ class _CadastroState extends State<Cadastro> {
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.card_travel),
-                              hintText: '999'),
+                              hintText: '999',
+                              ),
                         ),
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Complemento',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -354,11 +358,11 @@ class _CadastroState extends State<Cadastro> {
                   child: Column(   
                     children: [
                       Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                          padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                           child: Text(
                             'Informações Profissionais',
                             style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800,
                               fontSize: 30,
                             ),
@@ -369,7 +373,7 @@ class _CadastroState extends State<Cadastro> {
                         child: Text(
                           'Formação:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
@@ -387,7 +391,7 @@ class _CadastroState extends State<Cadastro> {
                         child: Text(
                           'Atuação profissional:',
                           style: TextStyle(
-                              color: AppColors.primaria01,
+                              color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
                         ),
                       ),
