@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
 import 'package:sinteu/core/app_images.dart';
 import 'package:sinteu/views/web/cadastro/index.dart';
+import 'package:sinteu/views/web/home/index.dart';
 
 class PaginaInicial extends StatefulWidget {
   const PaginaInicial({Key? key}) : super(key: key);
@@ -322,7 +323,11 @@ class _PaginaInicialState extends State<PaginaInicial> {
                         width: 400,
                         height: 45,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          },
                           child: Text(
                             'Entrar',
                             style: TextStyle(
