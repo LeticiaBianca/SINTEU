@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
-import 'package:sinteu/views/mobile/home/index.dart';
+import 'package:sinteu/views/web/home/index.dart';
 
 class Cadastro extends StatefulWidget {
   const Cadastro({ Key? key }) : super(key: key);
