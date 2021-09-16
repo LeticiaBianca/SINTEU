@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
 import 'package:sinteu/core/app_images.dart';
+import 'package:sinteu/views/web/buscas/index.dart';
 import 'package:sinteu/views/web/cadastros/index.dart';
 import 'package:sinteu/views/web/contato/index.dart';
 import 'package:sinteu/views/web/grupos/index.dart';
@@ -59,6 +60,7 @@ class _HomePageState extends State<HomePage> {
           NotificacoesPage(),//5
           ContatoPage(),//6
           CadastrosPage(),//7
+          BuscasPage(),//8
         ],
       ),
 
@@ -167,7 +169,7 @@ class _HomePageState extends State<HomePage> {
           _buildItemMenu(
               Icons.add, 'Cadastros', 1, () => _pageController.jumpToPage(7)),
           _buildItemMenu(
-              Icons.search, 'Buscas', 2, () => _pageController.jumpToPage(0)),
+              Icons.search, 'Buscas', 2, () => _pageController.jumpToPage(8)),
           _buildItemMenu(Icons.notification_important, 'Noticias', 3,
               () => _pageController.jumpToPage(2)),
           _buildItemMenu(
