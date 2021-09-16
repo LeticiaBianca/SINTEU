@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
+import 'package:sinteu/views/web/components/combobox/index.dart';
 import 'package:sinteu/views/web/home/index.dart';
 
 class CadastrosPage extends StatefulWidget {
@@ -12,6 +13,7 @@ class CadastrosPage extends StatefulWidget {
 class _CadastrosPageState extends State<CadastrosPage> {
   @override
   Widget build(BuildContext context) {
+    var atividadeController = new TextEditingController();
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
@@ -36,25 +38,43 @@ class _CadastrosPageState extends State<CadastrosPage> {
           ),
 
           //colocar um dropdown aqui
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Text(
-              'O que você deseja cadastrar?',
-              style: TextStyle(
-             color: AppColors.primaria01,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-              ),
-            ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          //   child: Text(
+          //     'O que você deseja cadastrar?',
+          //     style: TextStyle(
+          //    color: AppColors.primaria01,
+          //                 fontWeight: FontWeight.bold,
+          //                 fontSize: 20,
+          //     ),
+          //   ),
+          // ),
+
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          //   child: TextFormField(
+          //     decoration: InputDecoration(
+          //         prefixIcon: Icon(Icons.keyboard_arrow_down),
+          //     ),
+          //           ),
+          //         ),
+
+          ComboBox(
+              controller: atividadeController,
+              aoSelecionar: (value) {
+                print(atividadeController.text);
+              },
+              hint: 'O que você deseja cadastrar?',
+              items: [
+                DropdowItem(key: '1', value: 'Demandas de Empresas'),
+                DropdowItem(key: '2', value: 'Projetos em Desenvolvimento'),
+                DropdowItem(key: '3', value: 'Editais de Extensão'),
+                DropdowItem(key: '4', value: 'Oportunidades de Emprego'),
+                DropdowItem(key: '5', value: 'Oportunidades de Estágio'),
+                DropdowItem(key: '6', value: 'Oficina de Ideias'),
+                DropdowItem(key: '7', value: 'Oferta de Serviços'),
+              ],
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.keyboard_arrow_down),
-              ),
-                    ),
-                  ),
 
           Divider(height: 20,),
 
@@ -167,7 +187,7 @@ class _CadastrosPageState extends State<CadastrosPage> {
                       padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                       child: Container(
                         width: 350,
-                        height: 31,
+                        height: 40,
                         child: TextButton(
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
@@ -178,7 +198,9 @@ class _CadastrosPageState extends State<CadastrosPage> {
                             'Cadastrar',
                             style: TextStyle(
                                 color: AppColors.corFonte02,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                            ),
                           ),
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
