@@ -18,25 +18,25 @@ class _NoticiasPageState extends State<NoticiasPage> {
           children: [
 
             Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 80,
-              child: Center(
-                child: Text(
-                  'Notícias',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: AppColors.primaria01,
-                    fontWeight: FontWeight.bold
+              padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
+              child: Container(
+                width: MediaQuery.of(context).size.width-50,
+                height: MediaQuery.of(context).size.height/5,
+                color: AppColors.primaria01,
+                child: Center(
+                  child: Text(
+                    'Notícias',
+                    style: TextStyle(
+                      fontSize: 55,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
 
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -57,7 +57,7 @@ class _NoticiasPageState extends State<NoticiasPage> {
             ),
 
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -78,7 +78,7 @@ class _NoticiasPageState extends State<NoticiasPage> {
             ),
 
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.fromLTRB(25, 15, 25, 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

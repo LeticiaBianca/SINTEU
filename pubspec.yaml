@@ -55,6 +55,7 @@ flutter:
     - assets/images/conexao.png
     - assets/images/conversa.png
     - assets/images/insta.jpg
+    - assets/images/Projetos.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

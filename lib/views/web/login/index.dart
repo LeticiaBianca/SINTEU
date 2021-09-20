@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
 import 'package:sinteu/views/mobile/home/index.dart';
-import 'package:sinteu/views/web/cadastro/index.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

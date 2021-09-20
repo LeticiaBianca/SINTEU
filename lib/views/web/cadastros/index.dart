@@ -20,22 +20,22 @@ class _CadastrosPageState extends State<CadastrosPage> {
         children: [
           //texto cadastre sua demanda
           Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 80,
-              child: Center(
-                child: Text(
-                  'Cadastre sua demanda',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: AppColors.primaria01,
-                    fontWeight: FontWeight.bold
+              padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
+              child: Container(
+                width: MediaQuery.of(context).size.width-50,
+                height: MediaQuery.of(context).size.height/5,
+                color: AppColors.primaria01,
+                child: Center(
+                  child: Text(
+                    'Cadastro de demandas',
+                    style: TextStyle(
+                      fontSize: 55,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
 
           //colocar um dropdown aqui
           // Padding(
@@ -182,33 +182,42 @@ class _CadastrosPageState extends State<CadastrosPage> {
                   ),
 
           Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-                      child: Container(
-                        width: 350,
-                        height: 40,
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
-                          },
-                          child: Text(
-                            'Cadastrar',
-                            style: TextStyle(
-                                color: AppColors.corFonte02,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
-                            ),
+            alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: Container(
+                    width: 350,
+                    height: 40,
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) => HomePage()
+                          )
+                        );
+                      },
+                        child: Text(
+                          'Cadastrar',
+                          style: TextStyle(
+                            color: AppColors.corFonte02,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
                           ),
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  AppColors.primaria01)),
                         ),
-                      ),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                            AppColors.primaria03
+                          ),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              )
+                            )
+                        ),
                     ),
                   ),
+              ),
+          ),
 
         ],
       ),
