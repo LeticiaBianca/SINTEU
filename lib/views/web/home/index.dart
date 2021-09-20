@@ -61,6 +61,7 @@ class _HomePageState extends State<HomePage> {
           ContatoPage(),//6
           CadastrosPage(),//7
           BuscasPage(),//8
+          
         ],
       ),
 
@@ -80,6 +81,7 @@ class _HomePageState extends State<HomePage> {
       //       ),
       //     ),
       //   ),
+      //isScrollControlled = false,
         
 
     );

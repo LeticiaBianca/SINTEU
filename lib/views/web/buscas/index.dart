@@ -22,22 +22,22 @@ class _BuscasPageState extends State<BuscasPage> {
 
             //texto buscar
           Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 80,
-              child: Center(
-                child: Text(
-                  'Buscar',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: AppColors.primaria01,
-                    fontWeight: FontWeight.bold
+              padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
+              child: Container(
+                width: MediaQuery.of(context).size.width-50,
+                height: MediaQuery.of(context).size.height/5,
+                color: AppColors.primaria01,
+                child: Center(
+                  child: Text(
+                    'Buscar',
+                    style: TextStyle(
+                      fontSize: 55,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
 
             ComboBox(
               controller: atividadeController,
@@ -90,8 +90,15 @@ class _BuscasPageState extends State<BuscasPage> {
                             ),
                           ),
                           style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  AppColors.primaria01)),
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              AppColors.primaria03
+                            ),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              )
+                            )
+                          ),
                         ),
                       ),
                     ),
