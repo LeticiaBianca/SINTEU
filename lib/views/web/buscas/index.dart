@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
+import 'package:sinteu/views/web/buscas/main.dart';
 import 'package:sinteu/views/web/components/combobox/index.dart';
-import 'package:sinteu/views/web/home/index.dart';
 
 class BuscasPage extends StatefulWidget {
   const BuscasPage({ Key? key }) : super(key: key);
@@ -79,7 +79,7 @@ class _BuscasPageState extends State<BuscasPage> {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage()));
+                                    builder: (context) => Buscar()));
                           },
                           child: Text(
                             'Buscar',
