@@ -37,28 +37,7 @@ class _CadastrosPageState extends State<CadastrosPage> {
               ),
             ),
 
-          //colocar um dropdown aqui
-          // Padding(
-          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          //   child: Text(
-          //     'O que você deseja cadastrar?',
-          //     style: TextStyle(
-          //    color: AppColors.primaria01,
-          //                 fontWeight: FontWeight.bold,
-          //                 fontSize: 20,
-          //     ),
-          //   ),
-          // ),
-
-          // Padding(
-          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          //   child: TextFormField(
-          //     decoration: InputDecoration(
-          //         prefixIcon: Icon(Icons.keyboard_arrow_down),
-          //     ),
-          //           ),
-          //         ),
-
+          
           ComboBox(
               controller: atividadeController,
               aoSelecionar: (value) {
@@ -123,7 +102,7 @@ class _CadastrosPageState extends State<CadastrosPage> {
           Padding(
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                     child: Text(
-                      'Endereço:',
+                      'Local:',
                       style: TextStyle(
                           color: AppColors.primaria01,
                           fontWeight: FontWeight.bold,
