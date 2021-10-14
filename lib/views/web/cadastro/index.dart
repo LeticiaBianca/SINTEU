@@ -351,7 +351,7 @@ class _CadastroState extends State<Cadastro> {
                 padding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
                 child: Container(
                   width: MediaQuery.of(context).size.width/2-30,
-                  height: 200,
+                  height: 300,
                   color: AppColors.primaria01,
                   child: Column(   
                     children: [
@@ -385,9 +385,27 @@ class _CadastroState extends State<Cadastro> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                         child: Text(
                           'Atuação profissional:',
+                          style: TextStyle(
+                              color: AppColors.primaria02,
+                              fontWeight: FontWeight.w800),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.arrow_drop_down),
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                        child: Text(
+                          'Área de interesse',
                           style: TextStyle(
                               color: AppColors.primaria02,
                               fontWeight: FontWeight.w800),
@@ -413,29 +431,29 @@ class _CadastroState extends State<Cadastro> {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
                     child: Container(
-                      width: 350,
-                      height: 50,
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) => HomePage()
-                              )
-                            );
-                          },
-                          child: Text(
-                            'Cadastrar',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                              AppColors.primaria03
-                            )
+                      width: 400,
+                      height: 70,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(
+                          'Cadastre-se',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white
                           ),
                         ),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(AppColors.primaria03),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(35),
+                            )
+                          )
+                        ),
+                      ),
                     ),
                   ),
                 ),

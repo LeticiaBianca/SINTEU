@@ -9,6 +9,7 @@ import 'package:sinteu/views/web/grupos/index.dart';
 import 'package:sinteu/views/web/noticias/index.dart';
 import 'package:sinteu/views/web/notificacoes/index.dart';
 import 'package:sinteu/views/web/pagina_inicial/index.dart';
+import 'package:sinteu/views/web/perfil/index.dart';
 import 'package:sinteu/views/web/sobre/index.dart';
 import 'package:sinteu/views/web/vitrine/index.dart';
 
@@ -62,7 +63,8 @@ class _HomePageState extends State<HomePage> {
           ContatoPage(),//6
           CadastrosPage(),//7
           BuscasPage(),//8
-          Buscar()
+          Buscar(),
+          Perfil(),
           
         ],
       ),
@@ -135,21 +137,25 @@ class _HomePageState extends State<HomePage> {
               child: Align(
                 alignment: Alignment.topRight,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+                  padding: const EdgeInsets.fromLTRB(20, 20, 50, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Container(
-                        width: 45,
-                        height: 45,
-                        decoration: BoxDecoration(
+                      InkWell(
+                        onTap: (){ 
+                          _pageController.jumpToPage(10);
+                        },
+                        child: Container(
+                          width: 45,
+                          height: 45,
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             image: DecorationImage(
-                                image: AssetImage(AppImagens.perfil))),
+                              image: AssetImage(AppImagens.perfil)
+                            )               
+                          ),
+                        ),
                       ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.keyboard_arrow_down ))
                     ],
                   ),
                 ),
@@ -178,7 +184,7 @@ class _HomePageState extends State<HomePage> {
               () => _pageController.jumpToPage(2)),
           _buildItemMenu(
               Icons.group, 'Grupos', 4, () => _pageController.jumpToPage(3)),
-          _buildItemMenu(Icons.favorite, 'Vitrine', 5,
+          _buildItemMenu(Icons.amp_stories_rounded , 'Vitrine', 5,
               () => _pageController.jumpToPage(4)),
           _buildItemMenu(Icons.notifications, 'Notificações', 6,
               () => _pageController.jumpToPage(5)),
