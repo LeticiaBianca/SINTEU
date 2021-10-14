@@ -8,4 +8,5 @@ class AppColors {
   static final Color itemComFoco = Colors.green;
   static final Color corFontePadrao = Colors.black;
   static final Color corFonte02 = Colors.white;
+  static final Color corFonte03 = Colors.black54;
 }
