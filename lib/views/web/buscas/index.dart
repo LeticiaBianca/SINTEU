@@ -77,7 +77,7 @@ class _BuscasPageState extends State<BuscasPage> {
                         height: 40,
                         child: TextButton(
                           onPressed: () {
-                            Navigator.of(context).pushReplacement(
+                            Navigator.of(context).push(
                                 MaterialPageRoute(
                                     builder: (context) => Buscar()));
                           },

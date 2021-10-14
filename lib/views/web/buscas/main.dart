@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
 import 'package:sinteu/core/app_images.dart';
-import 'package:sinteu/views/web/buscas/index.dart';
 
 class Buscar extends StatefulWidget {
   const Buscar({ Key? key }) : super(key: key);
@@ -35,11 +34,12 @@ class _BuscarState extends State<Buscar> {
                       size: 20,
                     ),
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (context) => BuscasPage()
-                        )
-                      );
+                      Navigator.of(context).pop();
+                      // Navigator.of(context).pushReplacement(
+                      //   MaterialPageRoute(
+                      //     builder: (context) => BuscasPage()
+                      //   )
+                      // );
                     },
                   )
                 ),
