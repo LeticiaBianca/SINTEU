@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
 import 'package:sinteu/core/app_images.dart';
+import 'package:sinteu/views/web/configuracoes/index.dart';
 
 class Perfil extends StatefulWidget {
   const Perfil({ Key? key }) : super(key: key);
@@ -68,6 +69,32 @@ class _PerfilState extends State<Perfil> {
           ),
         ),
       ),
+
+        //Container editar perfil
+        Container(
+          width: MediaQuery.of(context).size.width / 9,
+          decoration: BoxDecoration(
+            color: AppColors.primaria02,
+            border: Border.all(
+              color: Colors.grey,
+            ),
+          ),
+              
+          child: TextButton(onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => ConfiguracoesPage()
+              )
+            );
+          },
+            child: Text("Editar perfil", 
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: AppColors.corFontePadrao,
+              ),
+            ),
+          ),
+        ),
 
         Divider(),
 
