@@ -38,10 +38,101 @@ class _GruposPageState extends State<GruposPage> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 25),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width*2/3,
-                    height: MediaQuery.of(context).size.height,
-                    color: AppColors.primaria01,
+                  child: Column(
+                    children: [
+                      Container(                    
+                        width: MediaQuery.of(context).size.width*2/3,
+                        height: 200,
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'A empresa X é boa?',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w800,
+                              fontSize: 20
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'data',
+                                  style: TextStyle(
+                                    color: AppColors.primaria02,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 8, 15, 8),
+                                child: Text(
+                                  '3 dias atrás',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'grupo',
+                                  style: TextStyle(
+                                    color: AppColors.primaria02,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 8, 15, 8),
+                                child: Text(
+                                  'Grupo da mecatronica',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'visualizações',
+                                  style: TextStyle(
+                                    color: AppColors.primaria02,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 8, 350, 8),
+                                child: Text(
+                                  '103 k',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Divider(
+                        thickness: 0.9,
+                        color: Colors.grey
+                      ),
+                      Container(
+                        child: Text(
+                          'descrição'
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 //  Padding(
@@ -63,14 +154,14 @@ class _GruposPageState extends State<GruposPage> {
                           height: MediaQuery.of(context).size.height/11,
                           child: Center(
                             child: Text(
-                              'Seus grupos',
+                              'Favoritos',
                               style: TextStyle(  
                                 color: Colors.grey
                               ),
                             ),
                           ),
                         ),
-                        _buildgruposja(AppImagens.negocios, 'Grupo da Mecatronica', 'Jessica Alves, José da Silva, Renato...'),
+                        _buildgruposja(AppImagens.negocios, 'Grupo da Mecatronica'),
                         Container(
                           width: MediaQuery.of(context).size.width-50,
                           height: MediaQuery.of(context).size.height/11,
@@ -83,11 +174,72 @@ class _GruposPageState extends State<GruposPage> {
                             ),
                           ),
                         ),
-                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis', '10 participantes'),
-                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis', '10 participantes'),
-                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis', '10 participantes'),
-                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis', '10 participantes'),
-                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis', '10 participantes')
+                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis'),
+                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis'),
+                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis'),
+                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis'),
+                        _buildgruposnew(AppImagens.negocios, 'Programadores em Divinópolis'),
+
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width/3-60,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: AppColors.primaria02), 
+                            ),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: CircleAvatar(
+                                      radius: 50,
+                                      backgroundColor: Colors.grey,
+                                      child: IconButton(
+                                        icon: Icon(Icons.add_a_photo, color: Colors.white, size: 25,),
+                                        onPressed: null,
+                                      ),                             
+                                    ),
+                                  ),
+                                ),
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 35, left: 10),
+                                      child: Container(
+                                        width: 250,
+                                        height: 40,
+                                        child: TextButton(
+                                          onPressed: null,
+                                          child: Text(
+                                          'Crie seu grupo',
+                                          style: TextStyle(
+                                            color: AppColors.corFonte02,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
+                                          ),
+                                          ),
+                                          style: ButtonStyle(
+                                            backgroundColor: MaterialStateProperty.all<Color>(
+                                              AppColors.primaria03
+                                            ),
+                                            shape: MaterialStateProperty.all(
+                                              RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(25),
+                                              )
+                                            )
+                                          ),
+                                        ),
+                                      ),
+                                    ),               
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -98,7 +250,7 @@ class _GruposPageState extends State<GruposPage> {
         ),
     );
   }
-  Widget _buildgruposja(foto, nome, participantes){
+  Widget _buildgruposja(foto, nome){
     return Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Container(
@@ -122,36 +274,18 @@ class _GruposPageState extends State<GruposPage> {
             Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      child: Text(
-                        nome,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: AppColors.primaria01,
-                          fontWeight: FontWeight.w700
-                        ),
+                  padding: const EdgeInsets.only(top: 35, left: 10),
+                  child: Container(
+                    child: Text(
+                      nome,
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.primaria01,
+                        fontWeight: FontWeight.w700
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Container(
-                      child: Text(
-                        participantes,
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: AppColors.primaria02,
-                        ),
-                      ),
-                    ),
-                  ),
-                )
+                ),               
               ],
             )
           ],
@@ -159,7 +293,7 @@ class _GruposPageState extends State<GruposPage> {
       ),
     );
    }
-   Widget _buildgruposnew(foto, nome, participantes){
+   Widget _buildgruposnew(foto, nome){
     return Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Container(
@@ -180,65 +314,31 @@ class _GruposPageState extends State<GruposPage> {
                 ),
               ),
             ),
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      child: Text(
-                        nome,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: AppColors.primaria01,
-                          fontWeight: FontWeight.w700
-                        ),
-                      ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 30, 10, 8),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  width: 200,
+                  height: 100,
+                  child: Text(
+                    nome,
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: AppColors.primaria01,
+                      fontWeight: FontWeight.w700
                     ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 8),
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Container(
-                      child: Text(
-                        participantes,
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: AppColors.primaria02,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 150,
-                  height: 30,
-                  child: TextButton(
-                    onPressed: null,
-                    child: Text(
-                      'Participar',
-                      style: TextStyle(
-                        color: AppColors.corFonte02,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        AppColors.primaria03
-                      ),
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25),
-                        )
-                      )
-                    ),
-                  ),
-                ),
-              ],
+              ),
+            ),
+            CircleAvatar(
+              backgroundColor: AppColors.primaria03,
+              radius: 23,
+              child: IconButton(
+                icon: Icon(Icons.favorite, color: Colors.white, size: 20,),
+                onPressed: null,
+              ),
             ),
           ],
         ),
