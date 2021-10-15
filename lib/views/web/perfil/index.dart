@@ -70,31 +70,45 @@ class _PerfilState extends State<Perfil> {
         ),
       ),
 
-        //Container editar perfil
-        Container(
-          width: MediaQuery.of(context).size.width / 9,
-          decoration: BoxDecoration(
-            color: AppColors.primaria02,
-            border: Border.all(
-              color: Colors.grey,
-            ),
-          ),
-              
-          child: TextButton(onPressed: (){
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => ConfiguracoesPage()
-              )
-            );
-          },
-            child: Text("Editar perfil", 
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: AppColors.corFontePadrao,
+      Align(
+            alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: Container(
+                    width: 350,
+                    height: 40,
+                    child: TextButton(
+                      onPressed: () {
+                        
+                        Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => ConfiguracoesPage()
+                        )
+                      );
+
+                      },
+                        child: Text(
+                          'Editar perfil',
+                          style: TextStyle(
+                            color: AppColors.corFonte02,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                            AppColors.primaria03
+                          ),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              )
+                            )
+                        ),
+                    ),
+                  ),
               ),
-            ),
           ),
-        ),
 
         Divider(),
 
