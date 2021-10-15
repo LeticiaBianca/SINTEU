@@ -18,7 +18,31 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
       body: ListView(
         children: [
 
-          //texto cadastre sua demanda
+          Align(
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, top: 10),
+              child: Container(
+                width: 50,
+                height: 50,
+               decoration: BoxDecoration(
+                borderRadius: new BorderRadius.all(new Radius.circular(100)),
+                color: AppColors.primaria03,
+              ),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  )
+                ),
+            ),
+          ),
+
           Padding(
               padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
               child: Container(
@@ -169,7 +193,28 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
           Padding(
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                     child: Text(
-                      'Rua:',
+                      'CEP:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+          Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Logradouro:',
                       style: TextStyle(
                           color: AppColors.primaria01,
                           fontWeight: FontWeight.bold,
@@ -205,6 +250,166 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                           ),
                     ),
                   ),
+
+          Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Cidade:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+          Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Estado:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+            Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Número:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+          Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Complemento:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+          Divider(height: 20,),
+
+          Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          child: Text(
+                            'Informações profissionais',
+                            style: TextStyle(
+                              color: AppColors.primaria01,
+                              fontWeight: FontWeight.w800,
+                              fontSize: 30,
+                            ),
+                          ),
+                        ),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Formação:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+          Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Atuação:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
+          Divider(height: 20,),
+
+          Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: Text(
+                      'Áreas de Interesse:',
+                      style: TextStyle(
+                          color: AppColors.primaria01,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          ),
+                    ),
+                  ),
+
 
           Align(
             alignment: Alignment.center,
