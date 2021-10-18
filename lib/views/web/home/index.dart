@@ -111,15 +111,17 @@ class _HomePageState extends State<HomePage> {
 
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                'SINTEU', 
-                style: TextStyle(
-                  fontSize: 40,
-                  color: AppColors.primaria01,
-                  fontWeight: FontWeight.w900
-                )
+              Center(
+                child: Text(
+                  'SINTEU', 
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: AppColors.primaria01,
+                    fontWeight: FontWeight.w900
+                  )
+                ),
               ),
               Text(
                 'Sistema de Integração entre Empresas e Universidades',
