@@ -223,18 +223,18 @@ class _PaginaInicialState extends State<PaginaInicial> {
                       borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
                     ),
                     child: Column(children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30),
-                        child: Container(
-                          child: Text(
-                            'Já possui Cadastro?',
-                            style: TextStyle(
-                              fontSize: 40,
-                              color: AppColors.primaria01
-                            ),
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(top: 30),
+                      //   child: Container(
+                      //     child: Text(
+                      //       'Já possui Cadastro?',
+                      //       style: TextStyle(
+                      //         fontSize: 40,
+                      //         color: AppColors.primaria01
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                       Padding(
                         padding: const EdgeInsets.only(top: 15, left: 15),
                         child: Container(
@@ -347,6 +347,40 @@ class _PaginaInicialState extends State<PaginaInicial> {
                         ),
                       ),
                     ),
+
+                    Divider(),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: Container(
+                        width: 400,
+                        height: 45,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => Cadastro()));
+                          },
+                          child: Text(
+                            'Criar nova conta',
+                            style: TextStyle(
+                              fontSize: 23,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white
+                            ),
+                          ),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(AppColors.primaria02),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              )
+                            )
+                          ),
+                        ),
+                      ),
+                    ),
+
                   ],),
                   ),
                 )
