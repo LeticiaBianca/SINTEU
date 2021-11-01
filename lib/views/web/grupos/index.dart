@@ -38,101 +38,212 @@ class _GruposPageState extends State<GruposPage> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 25),
-                  child: Column(
-                    children: [
-                      Container(                    
-                        width: MediaQuery.of(context).size.width*2/3,
-                        height: 200,
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: Text(
-                            'A empresa X é boa?',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w800,
-                              fontSize: 20
+                  child: Container(
+                    height: 900,
+                    child: Column(
+                      children: [
+                        Container(                    
+                          width: MediaQuery.of(context).size.width*2/3,
+                          height: 50,
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 25),
+                              child: Text(
+                                'A empresa X é boa?',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 20
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Container(
-                        child: Center(
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'data',
-                                  style: TextStyle(
-                                    color: AppColors.primaria02,
-                                    fontSize: 15
+                        Container(
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'data',
+                                    style: TextStyle(
+                                      color: AppColors.primaria02,
+                                      fontSize: 15
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 8, 15, 8),
-                                child: Text(
-                                  '3 dias atrás',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 15, 8),
+                                  child: Text(
+                                    '3 dias atrás',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'grupo',
-                                  style: TextStyle(
-                                    color: AppColors.primaria02,
-                                    fontSize: 15
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'grupo',
+                                    style: TextStyle(
+                                      color: AppColors.primaria02,
+                                      fontSize: 15
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 8, 15, 8),
-                                child: Text(
-                                  'Grupo da mecatronica',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 15, 8),
+                                  child: Text(
+                                    'Grupo da mecatronica',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'visualizações',
-                                  style: TextStyle(
-                                    color: AppColors.primaria02,
-                                    fontSize: 15
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'visualizações',
+                                    style: TextStyle(
+                                      color: AppColors.primaria02,
+                                      fontSize: 15
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 8, 350, 8),
-                                child: Text(
-                                  '103 k',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 350, 8),
+                                  child: Text(
+                                    '103 k',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      Divider(
-                        thickness: 0.9,
-                        color: Colors.grey
-                      ),
-                      Container(
-                        child: Text(
-                          'descrição'
+                        Divider(
+                          thickness: 0.9,
+                          color: Colors.grey
                         ),
-                      )
-                    ],
+                        Container(
+                          width: 800,
+                          child: Text(
+                            'Estou com uma oferta de emprego na empresa X e não achei muitas recomendações na internet. Se alguém tiver alguma experiencia nesse empresa gostaria de saber se é um bom lugar de se trabalhar.',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 800,
+                          height: 100,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 50, 20, 0),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.add_comment ),
+                                hintText: 'Adicionar comentário'
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(                    
+                          width: MediaQuery.of(context).size.width*2/3,
+                          height: 50,
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 25),
+                              child: Text(
+                                '1 Resposta ',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 18
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 800,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(
+                              'É uma ótima empresa, trabalhei lá por 3 anos! Super recomendo!',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 100,
+                          width: 900,
+                          child: Row(
+                            children: [
+                              Align(
+                                alignment: Alignment.topRight,
+                                child: Container(
+                                  width: 45,
+                                  height:45,
+                                  child: Stack(               
+                                    children: [
+                                      Center(
+                                        child: CircleAvatar(
+                                          radius: 50,
+                                          backgroundImage: AssetImage(AppImagens.perfil),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Nome do usuário',
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 12
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+                                  child: Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      'Respondido em 1 de maio',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 //  Padding(
