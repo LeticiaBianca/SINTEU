@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
-import 'package:sinteu/views/web/home/index.dart';
-import 'package:sinteu/views/web/perfil/index.dart';
 
 class ConfiguracoesPage extends StatefulWidget {
   const ConfiguracoesPage({ Key? key }) : super(key: key);

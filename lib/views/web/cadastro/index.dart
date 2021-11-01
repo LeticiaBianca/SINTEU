@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sinteu/core/app_colors.dart';
-import 'package:sinteu/views/web/home/index.dart';
 
 class Cadastro extends StatefulWidget {
   const Cadastro({ Key? key }) : super(key: key);
@@ -16,6 +15,35 @@ class _CadastroState extends State<Cadastro> {
       backgroundColor: Colors.white,
       body: ListView(
         children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, top: 10),
+              child: Container(
+                width: 50,
+                height: 50,
+               decoration: BoxDecoration(
+                borderRadius: new BorderRadius.all(new Radius.circular(100)),
+                color: AppColors.primaria03,
+              ),
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      // Navigator.of(context).pushReplacement(
+                      //   MaterialPageRoute(
+                      //     builder: (context) => BuscasPage()
+                      //   )
+                      // );
+                    },
+                  )
+                ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
